@@ -19,14 +19,6 @@ export async function generateImage(prompt: string, type: 'logo' | 'banner'): Pr
   return results[0].url;
 }
 
-// function enhancePrompt(basePrompt: string, type: 'logo' | 'banner'): string {
-//   const typeSpecificTerms = type === 'logo' 
-//     ? 'Create a professional, minimalist, and memorable logo design. The logo should be scalable, with clean lines and a modern aesthetic. It should effectively represent the brand and be easily recognizable at different sizes.'
-//     : 'Design an eye-catching, vibrant, and well-composed channel banner. The banner should be visually appealing, incorporate relevant imagery or graphics, and clearly display the channel name. Ensure it adheres to YouTube\'s recommended dimensions (2560x1440 pixels) and safe area guidelines.';
-  
-//   return `${typeSpecificTerms} The design should represent: ${basePrompt}. Ensure it's suitable for digital platforms and social media. Use appropriate color schemes and typography that align with the brand or channel theme.`;
-// }
-
 function enhancePrompt(basePrompt: string, type: 'logo' | 'banner'): string {
   const typeSpecificTerms = type === 'logo'
     ? `Design a professional, minimalist, and memorable logo that represents the brand identity clearly. The logo should feature clean lines, modern aesthetics, and be scalable to various sizes without losing detail or recognition. Focus on creating a versatile design suitable for social media, digital platforms, and print. Ensure the design works well on light and dark backgrounds, and avoid clutter.`
