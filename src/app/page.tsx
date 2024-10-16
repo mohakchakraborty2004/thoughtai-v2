@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Head from "next/head";
+import Image from "next/image";
 
 const Home: React.FC = () => {
   const [prompt, setPrompt] = useState("");
@@ -78,10 +79,13 @@ const Home: React.FC = () => {
         <div>
           <h2 className="text-xl font-bold mb-2">Generated Image:</h2>
           <div className={type === "logo" ? "w-64 h-64" : "w-full aspect-[16/9]"}>
-            <img
+              <Image
               src={imageUrl}
               alt="Generated"
-              className="w-full h-full object-contain"
+              width={type === "logo" ? 256 : 1920}  
+              height={type === "logo" ? 256 : 1080} 
+              layout="responsive"
+              objectFit="contain"
               onError={() => {
                 setError("Error displaying the generated image.");
               }}
