@@ -47,3 +47,4 @@ export async function GET() {
   console.log("Received GET request (not allowed)");
   return NextResponse.json({ error: 'Method Not Allowed' }, { status: 405 });
 }
+
