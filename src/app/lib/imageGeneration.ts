@@ -51,7 +51,7 @@ async function callAPI(prompt: string, type: 'logo' | 'banner'): Promise<Generat
 
   try {
     const response = await together.images.create({
-      model: "black-forest-labs/FLUX.1.1-pro",
+      model: "black-forest-labs/FLUX.1-schnell",
       prompt: prompt,
       steps: 10,
       seed: seed,
